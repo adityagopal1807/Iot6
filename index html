@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8051 Microcontroller Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>8051 Microcontroller Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Which port in the 8051 microcontroller does not have built-in pull-up resistors?</p>
+                <label><input type="radio" name="q1" value="A"> A) Port 1</label><br>
+                <label><input type="radio" name="q1" value="B"> B) Port 2</label><br>
+                <label><input type="radio" name="q1" value="C"> C) Port 0</label><br>
+                <label><input type="radio" name="q1" value="D"> D) Port 3</label><br>
+                <span class="feedback" id="feedback1"></span>
+            </div>
+            <div class="question">
+                <p>2. In which mode does Port 0 serve as the lower address byte when external memory is used?</p>
+                <label><input type="radio" name="q2" value="A"> A) General I/O mode</label><br>
+                <label><input type="radio" name="q2" value="B"> B) Input mode</label><br>
+                <label><input type="radio" name="q2" value="C"> C) Output mode</label><br>
+                <label><input type="radio" name="q2" value="D"> D) External memory mode</label><br>
+                <span class="feedback" id="feedback2"></span>
+            </div>
+            <div class="question">
+                <p>3. What is the main function of Port 1 in the 8051 microcontroller?</p>
+                <label><input type="radio" name="q3" value="A"> A) Serve as lower address byte</label><br>
+                <label><input type="radio" name="q3" value="B"> B) True I/O port with no alternative functions</label><br>
+                <label><input type="radio" name="q3" value="C"> C) Access external memory</label><br>
+                <label><input type="radio" name="q3" value="D"> D) Provide higher address byte</label><br>
+                <span class="feedback" id="feedback3"></span>
+            </div>
+            <div class="question">
+                <p>4. Which addressing mode allows data to be provided immediately after the opcode?</p>
+                <label><input type="radio" name="q4" value="A"> A) Direct Addressing Mode</label><br>
+                <label><input type="radio" name="q4" value="B"> B) Immediate Addressing Mode</label><br>
+                <label><input type="radio" name="q4" value="C"> C) Register Indirect Addressing Mode</label><br>
+                <label><input type="radio" name="q4" value="D"> D) Indexed Addressing Mode</label><br>
+                <span class="feedback" id="feedback4"></span>
+            </div>
+            <div class="question">
+                <p>5. Which register pair is used for 8-bit addresses in Register Indirect Addressing Mode?</p>
+                <label><input type="radio" name="q5" value="A"> A) DPTR</label><br>
+                <label><input type="radio" name="q5" value="B"> B) R0 and R1</label><br>
+                <label><input type="radio" name="q5" value="C"> C) A and B</label><br>
+                <label><input type="radio" name="q5" value="D"> D) R2 and R3</label><br>
+                <span class="feedback" id="feedback5"></span>
+            </div>
+            <div class="question">
+                <p>6. In which mode is the source memory accessed only from the program memory?</p>
+                <label><input type="radio" name="q6" value="A"> A) Implied Addressing Mode</label><br>
+                <label><input type="radio" name="q6" value="B"> B) Indexed Addressing Mode</label><br>
+                <label><input type="radio" name="q6" value="C"> C) Register Addressing Mode</label><br>
+                <label><input type="radio" name="q6" value="D"> D) Direct Addressing Mode</label><br>
+                <span class="feedback" id="feedback6"></span>
+            </div>
+            <div class="question">
+                <p>7. What is the instruction to transfer the contents of Port 3 to the accumulator in Direct Addressing Mode?</p>
+                <label><input type="radio" name="q7" value="A"> A) MOV A, P3</label><br>
+                <label><input type="radio" name="q7" value="B"> B) MOV P3, A</label><br>
+                <label><input type="radio" name="q7" value="C"> C) MOV A, #P3</label><br>
+                <label><input type="radio" name="q7" value="D"> D) MOV A, 03H</label><br>
+                <span class="feedback" id="feedback7"></span>
+            </div>
+            <div class="question">
+                <p>8. Which of the following instructions is invalid in Register Addressing Mode?</p>
+                <label><input type="radio" name="q8" value="A"> A) MOV A, R0</label><br>
+                <label><input type="radio" name="q8" value="B"> B) MOV R2, A</label><br>
+                <label><input type="radio" name="q8" value="C"> C) MOV R4, R5</label><br>
+                <label><input type="radio" name="q8" value="D"> D) ADD A, R5</label><br>
+                <span class="feedback" id="feedback8"></span>
+            </div>
+            <div class="question">
+                <p>9. How is data accessed in the Immediate Addressing Mode?</p>
+                <label><input type="radio" name="q9" value="A"> A) Via register contents</label><br>
+                <label><input type="radio" name="q9" value="B"> B) From memory locations</label><br>
+                <label><input type="radio" name="q9" value="C"> C) Directly in the instruction</label><br>
+                <label><input type="radio" name="q9" value="D"> D) Using a pointer</label><br>
+                <span class="feedback" id="feedback9"></span>
+            </div>
+            <div class="question">
+                <p>10. Which port is used for higher address byte with addresses A8-A15 when no external memory is connected?</p>
+                <label><input type="radio" name="q10" value="A"> A) Port 0</label><br>
+                <label><input type="radio" name="q10" value="B"> B) Port 1</label><br>
+                <label><input type="radio" name="q10" value="C"> C) Port 2</label><br>
+                <label><input type="radio" name="q10" value="D"> D) Port 3</label><br>
+                <span class="feedback" id="feedback10"></span>
+            </div>
+            <div class="question">
+                <p>11. In Implied Addressing Mode, which operation is performed on the accumulator?</p>
+                <label><input type="radio" name="q11" value="A"> A) Data transfer</label><br>
+                <label><input type="radio" name="q11" value="B"> B) Rotate left</label><br>
+                <label><input type="radio" name="q11" value="C"> C) Add</label><br>
+                <label><input type="radio" name="q11" value="D"> D) Subtract</label><br>
+                <span class="feedback" id="feedback11"></span>
+            </div>
+            <div class="question">
+                <p>12. What does the @ symbol indicate in the Register Indirect Addressing Mode?</p>
+                <label><input type="radio" name="q12" value="A"> A) Immediate data</label><br>
+                <label><input type="radio" name="q12" value="B"> B) Register indirect addressing</label><br>
+                <label><input type="radio" name="q12" value="C"> C) Direct addressing</label><br>
+                <label><input type="radio" name="q12" value="D"> D) Indexed addressing</label><br>
+                <span class="feedback" id="feedback12"></span>
+            </div>
+            <div class="question">
+                <p>13. Which of the following instructions moves the data located at the address specified by R0?</p>
+                <label><input type="radio" name="q13" value="A"> A) MOV A, @R0</label><br>
+                <label><input type="radio" name="q13" value="B"> B) MOV R0, A</label><br>
+                <label><input type="radio" name="q13" value="C"> C) MOV @R0, A</label><br>
+                <label><input type="radio" name="q13" value="D"> D) MOV A, R0</label><br>
+                <span class="feedback" id="feedback13"></span>
+            </div>
+            <div class="question">
+                <p>14. How many bits does the DPTR register use in Register Indirect Addressing Mode?</p>
+                <label><input type="radio" name="q14" value="A"> A) 8 bits</label><br>
+                <label><input type="radio" name="q14" value="B"> B) 16 bits</label><br>
+                <label><input type="radio" name="q14" value="C"> C) 32 bits</label><br>
+                <label><input type="radio" name="q14" value="D"> D) 4 bits</label><br>
+                <span class="feedback" id="feedback14"></span>
+            </div>
+            <div class="question">
+                <p>15. Which addressing mode specifies the address of the data directly in the instruction?</p>
+                <label><input type="radio" name="q15" value="A"> A) Register Addressing Mode</label><br>
+                <label><input type="radio" name="q15" value="B"> B) Direct Addressing Mode</label><br>
+                <label><input type="radio" name="q15" value="C"> C) Immediate Addressing Mode</label><br>
+                <label><input type="radio" name="q15" value="D"> A) Indirect Addressing Mode</label><br>
+                <span class="feedback" id="feedback15"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
